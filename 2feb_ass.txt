@@ -1,0 +1,141 @@
+Q1. Explain with an example each when to use a for loop and a while loop.
+
+Ans:-for loop:- A for loop is typically used when you know how many times you want to repeat a block of code. The for loop uses a counter variable that is initialized to a starting value and incremented or decremented at each iteration. The loop continues until the counter variable reaches a certain end value.
+#Example of for loop
+for i in range(1, 11):
+    print(i)
+
+while loop:- A while loop is typically used when you don't know how many times you want to repeat a block of code. Instead of using a counter variable, a while loop uses a condition that is tested at the beginning of each iteration. The loop continues until the condition is no longer true.
+#Example of while loop
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+Q2. Write a python program to print the sum and product of the first 10 natural numbers using for
+and while loop.
+
+Ans:- #Using a for loop
+
+# Calculate the sum of the first 10 natural numbers
+sum = 0
+for i in range(1, 11):
+    sum += i
+
+print("The sum of the first 10 natural numbers is:", sum)
+
+# Calculate the product of the first 10 natural numbers
+product = 1
+for i in range(1, 11):
+    product *= i
+
+print("The product of the first 10 natural numbers is:", product)
+
+#Using a while loop
+
+# Calculate the sum of the first 10 natural numbers
+sum = 0
+i = 1
+while i <= 10:
+    sum += i
+    i += 1
+
+print("The sum of the first 10 natural numbers is:", sum)
+
+# Calculate the product of the first 10 natural numbers
+product = 1
+i = 1
+while i <= 10:
+    product *= i
+    i += 1
+
+print("The product of the first 10 natural numbers is:", product)
+
+Q3. Create a python program to compute the electricity bill for a household.
+
+Ans:- # Input the number of units consumed
+units = int(input("Enter the number of units consumed: "))
+
+# Calculate the electricity bill based on the tariff rates
+if units <= 50:
+    bill = units * 0.50
+elif units <= 150:
+    bill = 25 + (units - 50) * 0.75
+elif units <= 250:
+    bill = 100 + (units - 150) * 1.20
+else:
+    bill = 220 + (units - 250) * 1.50
+
+# Add additional charges and taxes
+surcharge = bill * 0.20  # 20% surcharge for bills over Rs. 1,500
+taxes = bill * 0.05  # 5% tax on the total bill amount
+total_bill = bill + surcharge + taxes
+
+# Display the electricity bill
+print("Electricity Bill = Rs. {:.2f}".format(total_bill))
+
+Q4. Create a list of numbers from 1 to 100. Use for loop and while loop to calculate the cube of each
+number and if the cube of that number is divisible by 4 or 5 then append that number in a list and print
+that list.
+
+The per-unit charges in rupees are as follows: For the first 100 units, the user will be charged Rs. 4.5 per
+unit, for the next 100 units, the user will be charged Rs. 6 per unit, and for the next 100 units, the user will
+be charged Rs. 10 per unit, After 300 units and above the user will be charged Rs. 20 per unit.
+
+You are required to take the units of electricity consumed in a month from the user as input.
+
+Your program must pass this test case: when the unit of electricity consumed by the user in a month is
+310, the total electricity bill should be 2250.
+
+Ans:- Here's a program that creates a list of numbers from 1 to 100, calculates the cube of each number, and appends the number to a list if the cube is divisible by 4 or 5:
+
+# Create a list of numbers from 1 to 100
+num_list = list(range(1, 101))
+
+# Calculate the cube of each number and append to a list if divisible by 4 or 5
+result_list = []
+for num in num_list:
+    cube = num ** 3
+    if cube % 4 == 0 or cube % 5 == 0:
+        result_list.append(num)
+
+print(result_list)
+
+here's a program to calculate the electricity bill for a household based on the number of units consumed
+
+# Input the number of units consumed
+units = int(input("Enter the number of units consumed: "))
+
+# Calculate the electricity bill based on the tariff rates
+if units <= 100:
+    bill = units * 4.5
+elif units <= 200:
+    bill = 450 + (units - 100) * 6
+elif units <= 300:
+    bill = 1050 + (units - 200) * 10
+else:
+    bill = 3050 + (units - 300) * 20
+
+# Display the electricity bill
+print("Electricity Bill = Rs.", bill)
+
+Q5. Write a program to filter count vowels in the below-given string.
+
+string = "I want to become a data scientist"
+
+Ans:- string = "I want to become a data scientist"
+
+# Define a function to filter and count vowels in a string
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+
+# Call the function on the given string
+num_vowels = count_vowels(string)
+
+# Display the number of vowels in the string
+print("Number of vowels:", num_vowels)
